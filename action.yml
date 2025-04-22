@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Noel Garcia"
+description: "A simple podcast generator converting YAML to iTunes-compatible XML"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "mic"
+  color: "blue"
+inputs:
+  email: 
+    description: The committer's email address
+    required: true
+    default: ${{ github.actor }}@${{ github.repository }}
+  author: 
+    description: The committer's name
+    required: true
+    default: ${{ github.actor }}
